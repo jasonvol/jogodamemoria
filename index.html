@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Sidebar -->
+  <nav class="navbar navbar-dark bg-dark">
+      <!-- Navbar content -->
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            
+            
+                
+            <section class="section_modal">
+              <!-- The Modal -->
+          <div id="myModal" class="modal">
+          
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              
+               <ul>
+                 <li>1º - Todas as cartas ficam viradas.<br>
+                   2º - Cada jogador deve na sua vez desvirar duas cartas de cada vez 
+                   procurando os pares. Se você acertar, pode tentar de novo. <br>
+                   3º Quem juntar o maior número de pares ganha.
+                 </li>
+                 <li>4º Para saber quantos pares colocar no jogo, basta ver quantos são os jogadores e colocar 2 pares 
+                   por participante
+                 </li>
+               </ul>       
+            </div>
+          </div>
+          </section>
+          </div>
+          <!-- Trigger/Open The Modal -->
+          <span><button id="myBtn">Regras do Jogo</button></span><br>
+          <span class="text-muted"><input type="button" id="start" class="start_btn" onclick="iniciar()" value="Iniciar"></input></span><br>
+          <span class="text-muted"><button id="start" class="start_btn">Limpar</button></span><br>         
+            
+        </div>
+        <h4 class="text-white">Jogo da memória</h4>
+        <h2>Memory Game</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>        
+      </nav>      
+    </div>  
+</head>
+
+<body>
+  <div><title>Jogo da Memória</title></div>
+  <section class="memory-game">
+        
+    <div class="memory-card" data-framework="Telemarketing">
+      <img class="front-face" src="../img/operadortelemarketing.jpg" alt="Operador Telemarketing" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="operario">
+      <img class="front-face" src="../img/operario.jpg" alt="operario" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="pedreiro">
+      <img class="front-face" src="../img/pedreiro.jpg" alt="pedreiro" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="secretaria">
+      <img class="front-face" src="../img/secretaria.jpg" alt="secretaria" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="loja de rua">
+      <img class="front-face" src="../img/streetshop.jpg" alt="loja de rua" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="metro cheio">
+      <img class="front-face" src="../img/subwayfull.jpg" alt="metro cheio" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="metro lotado">
+      <img class="front-face" src="../img/subwayfull1.jpg" alt="metrô lotado" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="garota no metrô">
+      <img class="front-face" src="../img/subwaygirl.jpg" alt="garota no metrô" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="vendedor">
+      <img class="front-face" src="../img/fruitvendor.jpg" alt="vendedor de frutas" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="motorista de ônibus" >
+      <img class="front-face" src="../img/busdriver.jpg" alt="motorista de ônibus" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+
+    <div class="memory-card" data-framework="metalurgico1">
+      <img class="front-face" src="../img/metalurgico1.jpg" alt="metalurgico" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+    <div class="memory-card" data-framework="serralheiro2">
+      <img class="front-face" src="../img/serralheiro2.jpg" alt="serralheiro2" />
+      <img class="back-face" src="../img/js-badge.svg" alt="JS Badge" />
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

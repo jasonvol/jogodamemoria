@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  overflow: auto;
+  
+}
+
+.memory-game {
+  width: 800px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(20% - 5px);
+  height: calc(30% - 5px);
+  margin: 5px;
+  margin-top: 10px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .9s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  border: 2px solid;
+  border-radius: 8px ;
+  background-color: brow;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .9s;
+}
+  
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;  
+  position: absolute;
+  border-radius: 5px;
+  background: white;
+  backface-visibility: none;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: center; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 80%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding-left: 150px;
+  padding-right: 200px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button, .start_btn {
+  width: 120px;
+  height: 50px;
+  background-color: brown;
+  color:white;
+  box-shadow: #aaa;
+}
+
+h2, h4{
+  color: white;
+  text-align: left;
+}
+
+section_modal{
+  margin-top: 250px;
+  padding: 20px;
+}
+
+#startbtn{
+  margin-top: 30px;
+  display: flex;
+  padding: 20px;
+}
+
+.header{
+  align-items: center;
+}
+
+nav{
+  display: flexbox;
+}
+
+.navbar-toggler{
+  margin-bottom: 500px;
+  margin-left: 25px;
+}
+
+#navbarToggleExternalContent{
+  margin-left: 25px;
+}
